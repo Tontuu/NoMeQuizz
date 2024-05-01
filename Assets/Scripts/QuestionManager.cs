@@ -28,16 +28,11 @@ public class QuestionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        qtsData.Reshuffle();
         SetQuestion(currentQuestion);
         RightPanel.gameObject.SetActive(false);
         WrongPanel.gameObject.SetActive(false);
         GameFinished.gameObject.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void SetQuestion(int questionIndex)
@@ -124,6 +119,7 @@ public class QuestionManager : MonoBehaviour
         }
         else
         {
+            qtsData.Reshuffle();
             gameOverScreen.Setup(score, qtsData.questions.Length);
             score = 0;
         }

@@ -13,19 +13,77 @@ MonoBehaviour:
   m_Name: QtsData
   m_EditorClassIdentifier: 
   questions:
-  - questionText: Qual e o sexto planeta no sistema solar?
+  - questionText: Qual e a soma dos angulos internos de um triangulo?
     replies:
-    - Terra
-    - Jupiter
-    - Saturno
-    - Marte
-    correctReplyIndex: 2
-    questionImage: {fileID: 21300000, guid: 938f3a2261e7f7849803a0973ab6694b, type: 3}
-  - questionText: Qual o maior animal da terra?
-    replies:
-    - Sua mae
-    - Sua irma
-    - Sua tia
-    - Sua vo
+    - 180 graus
+    - 360 graus
+    - 90 graus
+    - 270 graus
     correctReplyIndex: 0
+    questionImage: {fileID: 21300000, guid: 6c90299af9572364cb0d02e54b417f8b, type: 3}
+  - questionText: Qual o resultado da soma entre 34 e 35?
+    replies:
+    - 69
+    - 70
+    - 68
+    - 71
+    correctReplyIndex: 0
+    questionImage: {fileID: 21300000, guid: b5fad3828bf688f4fb6f30ee5bd8c457, type: 3}
+  - questionText: Se um carro percorre 60 km em 1 hora, qual e sua velocidade media
+      em km/h?
+    replies:
+    - 30 km/h
+    - 45 km/h
+    - 75 km/h
+    - 60 km/h
+    correctReplyIndex: 3
+    questionImage: {fileID: 21300000, guid: 7be122bf95d050f48a5f1d029dbcfefd, type: 3}
+  - questionText: 'Qual e a fracao equivalente a 0,75? '
+    replies:
+    - 3/4
+    - 1/4
+    - 2/3
+    - 4/5
+    correctReplyIndex: 0
+    questionImage: {fileID: 21300000, guid: aa46003aabc96754e96dc5eb3691dc19, type: 3}
+  - questionText: Se um onibus percorre 240 km em 4 horas, qual e sua velocidade
+      media em km/h?
+    replies:
+    - 60 km/h
+    - 70 km/h
+    - 40 km/h
+    - 50 km/h
+    correctReplyIndex: 0
+    questionImage: {fileID: 21300000, guid: d63645fa9e18896478ee4f55dbb3df04, type: 3}
+  - questionText: Qual e a area de um circulo com raio de 3 metros?
+    replies:
+    - "12pi m\xB2"
+    - "6pi m\xB2"
+    - "18pi m\xB2"
+    - "9pi m\xB2"
+    correctReplyIndex: 3
+    questionImage: {fileID: 21300000, guid: 81b625d9b0734814eb470272711f620a, type: 3}
+  - questionText: 'Qual e o resultado de 8 dividido por 1/2? '
+    replies:
+    - 12
+    - 16
+    - 4
+    - 8
+    correctReplyIndex: 2
+    questionImage: {fileID: 21300000, guid: 6dd80cb1b6f2cd041a7794d91cf59b1c, type: 3}
+  - questionText: Qual e a raiz quadrada de 144?
+    replies:
+    - 10
+    - 16
+    - 12
+    - 14
+    correctReplyIndex: 2
+    questionImage: {fileID: 21300000, guid: 998337a45fb6baf4bbe06c5c16c197f0, type: 3}
+  - questionText: Qual e o perimetro de um quadrado com lado de comprimento 5 metros?
+    replies:
+    - '15 metros '
+    - 30 metros
+    - 20 metros
+    - 25 metros
+    correctReplyIndex: 2
     questionImage: {fileID: 21300000, guid: 961ff35b5925134449a38278068b4446, type: 3}
