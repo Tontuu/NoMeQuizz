@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,6 +16,8 @@ public class QuestionManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI FinalScore;
     public TextMeshProUGUI levelText;
+    public AudioSource correctAnswerAudio;
+    public AudioSource wrongAnswerAudio;
 
     // Game objects
     public GameOverScreen gameOverScreen;
@@ -28,6 +31,8 @@ public class QuestionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        correctAnswerAudio = gameObject.transform.Find("correctAnswerAudio").GetComponent<AudioSource>();
+        wrongAnswerAudio = gameObject.transform.Find("wrongAnswerAudio").GetComponent<AudioSource>();
         qtsData.Reshuffle();
         SetQuestion(currentQuestion);
         RightPanel.gameObject.SetActive(false);
@@ -64,11 +69,9 @@ public class QuestionManager : MonoBehaviour
     {
         int correctIndex = qtsData.questions[currentQuestion].correctReplyIndex;
 
-        Debug.Log("Current question: " + currentQuestion);
-        Debug.Log("Correct index: " + correctIndex);
-
         if (replyIndex == correctIndex)
         {
+            correctAnswerAudio.Play();
             score++;
             scoreText.text = "Score - " + score;
             RightPanel.gameObject.SetActive(true);
@@ -82,7 +85,7 @@ public class QuestionManager : MonoBehaviour
         }
         else
         {
-            Debug.Log(replyButtons[replyIndex].colors.selectedColor);
+            wrongAnswerAudio.Play();
             WrongPanel.gameObject.SetActive(true);
 
             // Change button color and highlight the right answer.
